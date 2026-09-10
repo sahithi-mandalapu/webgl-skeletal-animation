@@ -1,7 +1,3 @@
-# Team Members
-
-Sahithi Mandalapu & Sophia Louie
-
 # Overview
 
 This project implements skeletal animation with GPU skinning using WebGL. It includes:
