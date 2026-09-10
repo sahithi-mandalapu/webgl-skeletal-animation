@@ -49,25 +49,10 @@ Where to inspect the implementation (technical pointers)
 - Shaders used for skinning and skeleton display: `dist/skinning/Shaders.js` (source in `src/skinning/Shaders.ts`)
 - WebGL helpers: `src/lib/webglutils/` (`CanvasAnimation.ts`, `RenderPass.ts`, etc.) — these contain the utility functions that keep the rendering code small and readable.
 
-Notes for recruiters / reviewers
+Notes 
 - The `dist/` folder contains a compiled, runnable demo. The `src/` folder contains the TypeScript source and is intentionally small and well-structured to make technical review straightforward.
 - Look at `dist/skinning/Shaders.js` to see the GPU-side LBS implementation (vertex shader) — that's the most technically interesting part.
 
-Advanced / extra-credit functionality
+Advanced functionality
 - Root-joint translation: the demo supports translating the root bone and correctly propagates transforms through the hierarchy.
 - Texture mapping: models with UVs will render with an included texture.
-
-What I changed to prepare this repo for review
-- Cleaned and clarified the README to be recruiter-facing and actionable.
-- Fixed a small runtime issue in `src/skinning/App.ts` related to matrix data being passed to WebGL uniforms (ensures the demo runs reliably).
-
-Manual checks before sharing
-- Run a local static server and open `dist/index.html` to verify the demo loads and animations play.
-- Try the sample `split_cube.dae` in `dist/static/assets/skinning/` and confirm bone highlighting and playback controls work.
-
-Contact / Next steps
-If you'd like, I can:
-- Add a small `package.json` with `serve`/`start` scripts to make running the demo one-command.
-- Produce a short GIF or screenshot and add it to the README for faster recruiter consumption.
-
-— End of README —
